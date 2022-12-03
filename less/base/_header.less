@@ -1,0 +1,43 @@
+.header {
+    width: 100%;
+    background-color: rgba(13, 8, 7, 0.6);
+    color: #fff;
+    line-height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        .logo{
+            display: flex;
+            align-items: center;
+        }
+        .navbar {
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+
+                li {
+                    margin: 0 25px;
+
+                    a {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        .header-right{
+            margin-left: 30px;
+            
+            i,span{
+                margin: 0px 15px;
+                font-size: 16px;
+            }
+            i:last-child{
+                margin-right: 0px;
+            }
+        }
+    }
+}
