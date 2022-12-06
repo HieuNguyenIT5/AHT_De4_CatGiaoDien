@@ -24,7 +24,7 @@
                         box-sizing: border-box;
                         padding: 35px;
                         text-align: center;
-                    background-color: #fff;
+                        background-color: #fff;
                         .title{
                             font-size: 18px;
                             font-weight: 600;
@@ -42,6 +42,16 @@
 
             //Listing
             .listing{
+                .top-sellers,.featured,.most-reviews{
+                    opacity: 0;
+                    transition: 0.5s;
+                    height: 0px;
+                    
+                }
+                .top-sellers.active,.featured.active,.most-reviews.active{
+                    opacity: 1;
+                    height: auto;
+                }
                 margin-top: 20px;
                 .tab-bar{
                     width: 100%;
@@ -55,6 +65,7 @@
                         padding: 20px 15px;
                         font-size: 18px;
                         font-weight: bold;
+                        cursor: pointer;
                     }
                 }
                 .listing-content{
@@ -72,27 +83,26 @@
                                     transition: 0.5s;
                                     width: 100%;
                                 }
-                                i{
-                                    display: block;
-                                    padding: 10px;
-                                    font-size: 16px;
-                                    border: 1px solid #dddd;
-                                    border-radius: 5px 0px;
-                                    margin-bottom: 15px;
-                                    color: #dddd;
-                                    cursor: pointer;
-                                    transition: 0.3s;
-                                    &:hover{
-                                        background: #dd2f31;
-                                        color: #fff;
-                                    }
-                                }
-                                
                                 .btn{
                                     display: none;
                                     position: absolute;
                                     top:20px;
                                     right: 20px;
+                                    i{
+                                        display: block;
+                                        padding: 10px;
+                                        font-size: 16px;
+                                        border: 1px solid #dddd;
+                                        border-radius: 5px 0px;
+                                        margin-bottom: 15px;
+                                        color: #777;
+                                        cursor: pointer;
+                                        transition: 0.3s;
+                                        &:hover{
+                                            background: #dd2f31;
+                                            color: #fff;
+                                        }
+                                    }
                                 }
                             }
                             .bottom-content{
@@ -159,6 +169,7 @@
 
             //Brand
             .brand{
+                margin-top: 100px;
                 border-top: 1px solid #dddd;
                 .brand-item{
                     width: 16.6%;
@@ -167,6 +178,9 @@
                     img{
                         padding: 40px 20px;
                         
+                    }
+                    &:hover{
+                        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
                     }
                 }
             }
