@@ -1,0 +1,260 @@
+@media all and (max-width: 1200px) {
+    .header {
+        .header-content {
+            .logo {
+            }
+    
+            .navbar {
+                display: none;
+            }
+            .header-right{
+                .col-9();
+            }
+        }
+        
+    }
+    .slider {
+        .slider-content {
+            
+            .slider-img{
+                .img-top{
+                }
+            }
+            
+            .content {
+                .slider-title {
+                    font-size: 40px;
+                    margin-bottom: 10px;
+                }
+                .key-word {
+                    font-size: 26px;
+                    margin-bottom: 15px;
+                }
+    
+                .description {
+                    margin-bottom: 20px;
+                }
+    
+                .btn-shop-now {
+                 
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 1024px) {
+    //header
+    .header {
+        line-height: 60px;
+        .header-content {
+            .logo {
+            }
+    
+            .navbar {
+            }
+            .header-right{
+                &-item::after{
+                    top: 22px;
+                }
+                .search{
+                    margin: 8px 0px;
+                }
+            }
+        }
+        
+    }
+    //content
+    .main-content{
+        .columns{
+            .content{
+                .banner{
+                    transform: translateY(-30px);
+                    overflow: hidden;
+                    .item{
+                        overflow: hidden;
+                        width: 50%;
+                        &-content{
+                            border-bottom: 1px solid #777;
+                            width: 100%;
+                            height: 100%;
+                        }
+                        .img-content{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+                .listing{
+                    .listing-content{
+                        .item-listing{
+                            .col-4();
+                            .item-inner{
+                                .top-content{
+                                    img{
+
+                                    }
+                                    .btn{
+                                        i{
+                                            padding: 5px;
+                                            font-size: 12px;
+                                        }
+                                    }
+                                }
+                                .bottom-content{
+                                    padding: 20px;
+                                    .title{
+                                        font-size: 12px;
+                                    }
+                                    .price{
+                                        font-size: 12px;
+                                    }
+                                }
+                                &:hover img{
+                                }
+                                &:hover .btn{
+                                }
+                            }
+                        }
+                    }
+                }
+                .brand{
+                    .brand-item{
+                        img{
+                            padding: 15px;
+                            box-sizing: border-box;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    .footer{
+        &-inner{
+            .footer-top{
+                padding-top: 50px;
+            }
+            .footer-content{
+                .item{
+                    .col-6();
+                    padding-top: 71px;
+                }
+
+            }
+        }
+        .copyright{
+            font-size: 10px;
+            span{
+                display: none;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 768px) {
+    //header
+    .header {
+        position:static;
+        background-color: rgba(13, 8, 7, 1);
+        .header-content {
+            .logo {
+                img{
+                    width: 100%;
+                }
+            }
+    
+            .header-right{
+            }
+        }
+        
+    }
+    //content
+    .main-content{
+        .columns{
+            .content{
+                .banner{
+                    .item{
+                        width: 100%;
+                        .img-content{
+                            display: none;
+                        }
+                    }
+                }
+
+                .listing{
+                    .listing-content{
+                        .item-listing{
+                            .col-6();
+                            .item-inner{
+                                .bottom-content{
+                                    padding: 35px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .slider {
+        .slider-content {
+            .content {
+                transform: translateY(-70%);
+                .description {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 576px) {
+    .slider {
+        .slider-content {
+            .content {
+                .key-word{
+                    display: none;  
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 375px) {
+    .slider {
+        .slider-content {
+            .content {
+                display: none;
+            }
+        }
+    }
+
+    .main-content{
+        .columns{
+            .content{
+                .listing{
+                    .listing-content{
+                        .item-listing{
+                            .col-12();
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    .footer{
+        &-inner{
+            .footer-content{
+                .item{
+                    .col-12();
+                    padding-top: 30px;
+                }
+
+            }
+        }
+    }
+}

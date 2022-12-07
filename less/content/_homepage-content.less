@@ -7,28 +7,37 @@
                 // position: absolute;
                 display: flex;
                 flex-wrap: wrap;
-                top: 0;
-                left: 0;
                 box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
-                transform: translateY(-80px);
+                transform: translateY(-77px);
+                overflow: hidden;
                 .item{
                     width: 33.33%;
                     display: flex;
                     align-items: center;
                     .img-content{
                         width: 100%;
-                    }
-                    .item-content{
-                        width: 100%;
                         height: 100%;
+                    }
+                    &-content{
+                        width: 100%;
                         box-sizing: border-box;
                         padding: 35px;
                         text-align: center;
                         background-color: #fff;
+                        .img-icon{
+                            height: 70px;
+                            position: relative;
+                            img{
+                                position: absolute;
+                                bottom: 0;
+                                left: 50%;
+                                transform: translateX(-50%);
+                            }
+                        }
                         .title{
                             font-size: 18px;
                             font-weight: 600;
-                            margin: 15px;
+                            margin: 19px 0;
                             text-transform: uppercase;
                         }
                         .discpription{
@@ -42,6 +51,7 @@
 
             //Listing
             .listing{
+                margin-top: 5px;
                 .top-sellers,.featured,.most-reviews{
                     opacity: 0;
                     transition: 0.5s;
@@ -52,7 +62,6 @@
                     opacity: 1;
                     height: auto;
                 }
-                margin-top: 20px;
                 .tab-bar{
                     width: 100%;
                     display: flex;
@@ -62,7 +71,7 @@
                         text-transform: uppercase;
                     }
                     .btn-tab-bar{
-                        padding: 20px 15px;
+                        padding: 13px 18px;
                         font-size: 18px;
                         font-weight: bold;
                         cursor: pointer;
@@ -72,7 +81,7 @@
                     .item-listing{
                         width: 25%;
                         padding: 0px 15px;
-                        margin-top: 30px;
+                        margin-top: 39px;
                         box-sizing: border-box;
                         .item-inner{
                             .top-content{
@@ -90,8 +99,8 @@
                                     right: 20px;
                                     i{
                                         display: block;
-                                        padding: 10px;
-                                        font-size: 16px;
+                                        padding: 9px;
+                                        font-size: 14px;
                                         border: 1px solid #dddd;
                                         border-radius: 5px 0px;
                                         margin-bottom: 15px;
@@ -132,30 +141,30 @@
             // End listing
             //testimonials
             .testimonials{
-                margin-top: 100px;
+                margin-top: 86px;
                 .clients-say{
                     text-align: center;
                     .title{
                         display: block !important;
                         font-size: 36px;
                         font-weight: bold;
-                        margin-bottom: 50px ;
+                        margin-bottom: 45px ;
                     }
                     .avata-img{
                         margin: 0 auto;
                     }
                     .message{
-                        width: 770px;
-                        margin: 30px auto;
+                        max-width: 770px;
+                        margin: 24px auto;
                         font-size: 18px;
                         font-weight: 400;
                     }
                     .client-info{
-                        margin: 40px 0px;
+                        margin: 30px 0px;
                         .name-client{
                             font-size: 18px;
                             font-weight: bold;
-                            margin-bottom: 20px;
+                            margin-bottom: 8px;
                         }
                         .description{
                             font-size: 14px;
@@ -169,15 +178,15 @@
 
             //Brand
             .brand{
-                margin-top: 100px;
+                margin-top: 118px;
                 border-top: 1px solid #dddd;
                 .brand-item{
                     width: 16.6%;
                     padding: 0px 15px;
                     box-sizing: border-box;
                     img{
-                        padding: 40px 20px;
-                        
+                        width: 100%;
+                        padding: 36px 20px;
                     }
                     &:hover{
                         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);

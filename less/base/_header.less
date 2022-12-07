@@ -7,40 +7,112 @@
     top: 0;
     left: 0;
     z-index: 1000;
+
     .header-content {
-        display: flex;
-        justify-content: space-between;
-        .logo{
+        .logo {
             display: flex;
             align-items: center;
         }
+
         .navbar {
+            padding: 0;
+
             ul {
                 display: flex;
                 flex-wrap: wrap;
 
                 li {
-                    margin: 0 25px;
+                    margin: 0 27px;
 
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    &:first-child {
+                        margin-left: 0;
+
+                    }
                     a {
                         color: #fff;
                         transition: 0.3s;
-                        &:hover{
+
+                        &:hover {
                             color: #ccc;
                         }
                     }
                 }
             }
         }
-        .header-right{
-            margin-left: 30px;
-            
-            i,span{
-                margin: 0px 15px;
+
+        .header-right {
+            display: flex;
+            justify-content: right;
+            &-item {
                 font-size: 16px;
+                margin: 0 25px;
+                position: relative;
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    width: 2px;
+                    height: 16px;
+                    background-color: #777;
+                    top: 42px;
+                    right: -26px;
+                    // display: none;
+
+                }
+
+                &:last-child {
+                    margin-right: 0px;
+
+                    &::after {
+                        display: none;
+                    }
+
+                }
+
+                &:first-child::after {
+                    display: none;
+                }
+
             }
-            i:last-child{
-                margin-right: 0px;
+            .search {
+                width: 0px;
+                margin: 31px 0px;
+                border-radius: 20px;
+                overflow: hidden;
+                background-color: #fff;
+                transition: 0.5s;
+                .hide{
+                    line-height: 38px;
+                    color: #777;
+                    padding: 0px 10px;
+                }
+                form {
+                    display: flex;
+                    input {
+                        flex: 1;
+                        display: block;
+                        border: none;
+                        outline: none;
+                        font-size: 16px;
+                    }
+
+                    button {
+                        height: 38px;
+                        width: 30px;
+                        background-color: #fff;
+                        border: none;
+                        outline: none;
+                        padding: 0;
+                    }
+                }
+
+            }
+            .nemu-respon{
+                display: none;
             }
         }
     }

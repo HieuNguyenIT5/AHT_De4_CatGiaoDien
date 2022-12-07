@@ -1,13 +1,14 @@
 $(document).ready(function () {
+    //slider
     $(".slider-content").slick({
         autoplay:true,
         autoplaySpeed:2000,
         infinite: true,
         speed: 300,
         slidesToShow: 1,
-        nextArrow: '<i class="next-slider fa-solid fa-chevron-left"></i>',
-        prevArrow: '<i class="prev-slider fa-solid fa-chevron-right"></i>'
     })
+
+    //testimonials
     $(".testimonials").slick({
         autoplay:true,
         autoplaySpeed:2000,
@@ -16,6 +17,8 @@ $(document).ready(function () {
         speed: 300,
         slidesToShow: 1,
     })
+
+    //select listing
     $("#tab-bar-listing .btn-tab-bar").click(function(){
         $("#tab-bar-listing .btn-tab-bar.selected").removeClass("selected")
         $(this).addClass("selected")
@@ -34,5 +37,17 @@ $(document).ready(function () {
                 $(".listing .most-reviews").addClass('active')
                 break;
         }
+    });
+    
+
+    //search
+    $(".header-right-item.search-click").click(function(){
+        $(".header-right-item").hide();
+        $(".header-right .search").css({"width":"100%"});
+    });
+
+    $(".header-right .hide").click(function(){
+        $(".header-right .search").css({"width":"0%"});
+        $(".header-right-item").show();
     });
 });
