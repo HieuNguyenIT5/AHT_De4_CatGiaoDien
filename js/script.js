@@ -50,4 +50,23 @@ $(document).ready(function () {
         $(".header-right .search").css({"width":"0%"});
         $(".header-right-item").show();
     });
+    //navbar respon
+    function toggle_navbar_mobile(toogle){
+        if(toogle == "show"){
+            $(".navbar-overlay").show();
+            $(".navbar-mobile").css({"transform": "translateX(0%)"});
+        }else{
+            $(".navbar-overlay").hide();
+            $(".navbar-mobile").css({"transform": "translateX(100%)"});
+        }
+    }
+    $(".header-right .nemu-respon").click(function(){
+        toggle_navbar_mobile("show");
+    });
+    $(".navbar-mobile .btn-close, .navbar-overlay").click(function(){
+        toggle_navbar_mobile("hide");
+    });
+    $(window).resize(function(){
+        toggle_navbar_mobile("hide");
+    });
 });
